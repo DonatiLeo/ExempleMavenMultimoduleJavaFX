@@ -1,0 +1,14 @@
+language: java
+
+jdk:
+  - openjdk17
+  
+services:
+  - docker
+
+install:
+  - mvn clean install -DskipTests
+ 
+script:
+  - docker version
+  - mvn test
